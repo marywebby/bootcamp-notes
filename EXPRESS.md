@@ -22,7 +22,9 @@ DAY 1 ->
         - how does this relate to the front end? 
             - we can fetch from our own APIs
         - EADDRINUSE 
- 
+            - this could mean that you have another temrinal running in the background thats already using localhost with whatever port you chose. 
+        - DOMAIN: http://localhost:3003/ 
+        - you should understand a req and res is 2 halves of something you have to have. if a request is sent and nothing is sent back then that would tell you you have an error. 
     
 
     HOW TO GET STARTED 
@@ -45,10 +47,12 @@ DAY 1 ->
         - used on 09, under server.js, this is where we implied middleware to say anything that is in that public folder you can just turn around and serve up, so all the routes in publics will be create and we can go through all of them without having to create each round for example in the server-static.js
         - called middleware becaue its saying before any of the routes are created, go through this middleware(for example kanye interuppting taylor swift at the grammys), 
             - (req, res, next) ... 
+        - EXPRESS.JSON, I WANT SOME JSON BACK, IT WILL HANDLE THAT USECASE  
+        - there is also express.urlencoded, this parses the incoming request with urlencoded data
 
 
 
-    EXAMPLES USING THE CALLBACK FUNCTIONS
+    EXAMPLES USING THE CALLBACK FUNCTIONS, GET + POST + DELETE ARE ALL METHODS OF POST REQUESTS
         - EXAMPLE WITH APP.GET
             app.get("/send" (req,res) => {
                 res.sendFile(path.join( __dirname, "public/sendfile.html"))
@@ -74,10 +78,38 @@ DAY 1 ->
             - key=value - query parameters
             - these will automatically trans by express,on req obj at req.query 
         - differnce in term and category 
-            - 
+        - post requests are used for when you want to create something new, "post it to that endpoint" 
+        - to add a new post method to a string, not just code over it but add ANOTHER ONE, you will (20-STU-DATA-PERSISTENCE)
+
+            fs.readFile('./db/review.json', utf8, (err, data) => {
+                if (err) {
+                    console.error(err)
+                } else {
+                    const parsedReviews = JSON.parse(data);
+                    parsedReviews.push(newReview);
+                
+            const reviewString = JSON.stringify(parsedReviews, null, 2);
+            
+            fs.writeFile('./db/review.json', reviewString, (err) => 
+                err 
+                ? console.error(err)
+                : console.log(
+                    'Review for #{newReview.product} has been written to JSON file'
+                )
+            );
+        }
+    });
+
+    INSOMNIA 
+        -  used to call API without having to use the browser
+        - "a lot less annoying" - grady 
+        - clean enviorment to only test your API, clean way to view
 
     
 
     ***ALL ACTIVITY NOTES ARE IN THE SPECIFIC ACTIVITIES IN EITHER SOLVED OR UNSOLVED IN UPPERCASE***
 
-    TERMS.JSON ON ACTIVITY 6 HAS A LOT OF GOOD TERMS TO LOOK AT 
+
+
+    OTHER 
+        - TERMS.JSON ON ACTIVITY 6 HAS A LOT OF GOOD TERMS TO LOOK AT 
