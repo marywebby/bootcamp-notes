@@ -30,7 +30,7 @@ ORM (OBJECT RELATIONAL MAPPER) NOTES ->
     3. and also add in express
     (there is also npm i --save-dev example@1.1.1, and this will save it in your devDependences instead of regualar)
     4. you will add this connect in your connection.js file, or even your server.js, this is called a connection object, the capital S Sequelize is for classes. after the database, root, and password, it is an object 
-       1.  
+    1.  
         const Sequelize = require('sequelize');
         
         cosnt sequelize = new Sequelize(        
@@ -47,20 +47,20 @@ ORM (OBJECT RELATIONAL MAPPER) NOTES ->
         module.exports = sequelize
     
         and then in your server.js file, you will import it 
-       2. 
+    2. 
         and then in your server.js file, you will import it using: 
 
         const sequelize = require('./config/connection'); 
       
-       3. 
+    3. 
         then you will import this notation, this is basically saying sync up with the database(lay of the land). 
         
         sequelize.sync().then(() => {
           app.listen(PORT, () => console.log("Now listening"));
           )}; 
 
-      4. source the schema.sql using => SOURCE schema.sql in mysql
-      5. run => npm start in your terminal 
+    4. source the schema.sql using => SOURCE schema.sql in mysql
+    5. run => npm start in your terminal 
 
 
 
