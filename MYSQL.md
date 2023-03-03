@@ -1,5 +1,7 @@
 CLASS 2/13 -> mysql 
 
+********TO BEGIN YOU NEED TO SOURCE THE SCHEMA.SQL IN THE DATABASE FILE, AND THEN USE THE DATABASE********
+
  SQL query interacts with a database, using th enames of tables, coloumns and relationships between the tables 
 
 COMMAND LINE COMMANDS 
@@ -86,6 +88,9 @@ COMMAND LINE COMMANDS
         );
         (this will be referencing the primary key we made in the instructors table
             FOREIGN KEY (instructor_id) REFERENCES instructors(id) ON DELETE SET NULL)
+
+
+********TO BEGIN YOU NEED TO SOURCE THE SCHEMA.SQL IN THE DATABASE FILE, AND THEN USE THE DATABASE********
    
    
 - JOIN(s)

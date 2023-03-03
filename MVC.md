@@ -44,6 +44,7 @@ MVC -> MODEL VIEW CONTROLLER
     - TEMPLATING IS...
         - HANDLEBARS.JS IS HELPING US TAKE OUR DATA, AND THEN PLACE IT INTO OUR HTML TO THEN VIEW
         - MAIN.HANDLEABRS IS THE TEMPLATE, THE ETC.HANDLEBARS IS ANOTHER TEMPLATE THAT WE STICK INTO MAIN, KEEPING THE SAME LAYOUT AND THEN CHANGING THE DATA INTO IT. MIAN IS THE ENTRY POINT FOR THE ETC FILE, HAS TO START AT MAIN. 
+        - COOKIES - small files that websites put on your PC to store info about your preferences. (IE. A CART THAT YOU HAVE START TO PURCHASE BUT NOT CHECKED OUT)
 
 - OVERALL CONCEPTS FROM EACH ACTIVITES
 
@@ -88,5 +89,28 @@ MVC -> MODEL VIEW CONTROLLER
         - NEED TO "Build out this route so that it serializes all of the dish objects that it receives." IN DISH_ROUTES.JS
         - BUILD A LOOP FOR GETTING ALL DISHES, MAP ALL OF THEM, AND RETURN AN ARRAY, THEN RENDER DISHES
     - 09: 
-    - 10: 
+        - HANDLING INPUTS FROM A FORM AND PLACING IT INTO A PREMADEHTML WITH {{DISH_NAME}}, {{DESCIRPTION}}, & {{GUEST_NAME}}
+    - 10: SKIPPED, LOOK BACK ON THE SOLVED
+    - 11: 
+        - WENT OVER HOW YOU CAN INSERT TINY BIT SIZED PEICES OF INFO SO THAT ITS EASIER TO DIGEST. THESE ARE CALLED PARTIALS 
+    - 12: 
+        - SEEING HOW TO IMPLEMENT PARTIALS INTO OUR OWN HANDLEBARS FOLDERS. {{> partial_something}}, the > is using parsing, where once it reads ">" and then knows that after that character it knows that "partial_something" is a partial
+    - 13: 
+        - skipped, custom helpers
+    - 14: 
+        - skipped, custom helpers 
+    - 15: 
+        - SESSIONS, ALSO COOKIES, THIS WILL BE SAVING ACTIVITY LOCATED ON THE PAGE 
+    - 16: 
+        - WHAT WENT WRONG FOR ME WHEN STARTING: LOG IN STEPS
+                - npm i 
+                - node seeds/index.js 
+                - then go in and souce the database and use the database we want 
+        - req.session is a bucket that we can stick things in that will be avaliable for a user accross that session 
+        - https://www.npmjs.com/package/express-session -> good link to info about express session 
+            - we are using the package express-session
+    - 17: 
+    - 18: 
+    - 19: 
+    - 20: 
       
