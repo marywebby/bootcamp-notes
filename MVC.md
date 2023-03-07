@@ -9,7 +9,8 @@ MVC -> MODEL VIEW CONTROLLER
     - MVC STANDS FOR : 
         - MODELING THE DATA, DATA LAYER WHICH UPDATES THE VIEW
         - VIEW IS PRESENTATION, UI/UX PIECE
-        - CONTROLLER HANDLE USER INPUT, GO DO A MODEL, GO SHOW THIS TO THE USER, RESPONSE TO USER INTERACTION 
+        - CONTROLLER HANDLE USER INPUT, GO DO A MODEL, GO SHOW THIS TO THE USER, RESPONSE TO USER INTERACTION
+        - its the interface between Models and Views 
     - TEMPLETE ENGINE : 
         - PEICE OF SOFTWARE THAT COMPLIES DATA AND TEMPLATES TO GENERATE SOMETHING LIKE HTML, FEED DATA INTO HTML (IE, AT THIS LIST TAG STICK SOMETHING IN THERE)
         - PLACEHOLDERS FOR WHERE WE WANT TO PUT DATA 
@@ -26,7 +27,8 @@ MVC -> MODEL VIEW CONTROLLER
         - JSUT THE BASICS, DO NEED TO EVENT HANDLE, OR LISTENING 
         - GREAT INTO TO TEMPLATE LANGUAGES, 
         - HOW CAN WE LEARN TO IMPLEMENT 
-            - HELPING US BUIDING SOMETHING FROM SCRATHC, DEBUG A BROKEN APP, REVERCE ENGINEER BROKEN CODE. 
+            - HELPING US BUIDING SOMETHING FROM SCRATHC, DEBUG A BROKEN APP, REVERCE ENGINEER BROKEN CODE.
+        - {{{EXCECUTE FUNCTION}}}(3) VS {{VARIBALE}}(2)
     - WHAT THE MINI PROJECT WILL BE 
         - FUND MY PROJECT PAGE 
         - IT WILL REQUIRE A LOGIN AND PASSWORD, WHETHER TO SIGN UP OR LOGIN
@@ -110,7 +112,44 @@ MVC -> MODEL VIEW CONTROLLER
         - https://www.npmjs.com/package/express-session -> good link to info about express session 
             - we are using the package express-session
     - 17: 
+        - connect session sequalize = new dependency which helps us track the session 
+        - const sess = {
+            secret: "super secret cookie", 
+            cookie: {
+                maxAge: 24 * 60 * 60 * 1000
+            },
+            resave: false, 
+            saveUninitalized: false, 
+            store: new SequelizedStore{
+                db: sequelize
+            }
+        }; 
+        - placing middleware in a new file and requiring it in our routes
     - 18: 
     - 19: 
     - 20: 
-      
+    - 21: 
+    - 22:
+        - SHOWING HOW TO DISPLAY SEQUELIZE DATA AND IMPLEMENT INTO THE HANDLEBARS 
+    - 23: 
+    - 24: 
+    - 25: 
+        - .eslintignore (E~S~lint)
+            - similar to .gitignore
+        - helps with debugging and displaying problems in the problems tab of the terminal
+        - in package.json, there is a command line that you can run that will find the problems for you,
+    - 27:
+        - installing prettier 
+            - npm install prettier eslint-config-prettier --save-dev
+        - the rest of the settings to style prettier the way you like, there is a point where we introduce eslint to prettier, and how to make them not fight eachother by introducing them into each others .json's 
+        - user settings 
+         -> format
+         -> on save 
+    - 28: 
+        - mini-project 
+        - introduced full MVC framework 
+
+
+CHALLENGE 
+    - creating a work press site for any dev to use 
+    - 
